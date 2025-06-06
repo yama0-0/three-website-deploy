@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;700&display=swap");
+
+/* 全要素、不必要な余白を全て取り除いている */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  color: white;
+  /* x方向つまり左右のはみ出た部分を隠す、左右にスクロールできなくなった */
+  overflow-x: hidden;
+}
+
+canvas {
+  position: fixed;
+  /* ブラウザの左上に対して描画を開始するという意味 */
+  top: 0;
+  left: 0;
+}
+
+main {
+  /* 絶対値で位置を決めることができる */
+  position: absolute;
+  width: 100vw;
+  height: 200vh;
+  /* いちばん手前に来て欲しい */
+  z-index: 100;
+  /* 中央寄 */
+  justify-content: center;
+  text-align: center;
+  /* 間の大きさ */
+  font-size: 4rem;
+  margin-top: 70px;
+}
+
+section {
+  /* セクションの中身が最低でも100vhになるように設定している */
+  min-height: 100vh;
+  padding: 20px;
+  font-size: 3.5rem;
+}
